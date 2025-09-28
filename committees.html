@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Comités - Evaluación Docente 360°</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra Lateral de Navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <h2>ED360°</h2>
+                <span>Plataforma de Evaluación Docente</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i>📊</i> Panel de Control
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link">
+                        <i>👥</i> Usuarios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="evaluations.html" class="nav-link">
+                        <i>📝</i> Evaluaciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="complaints.html" class="nav-link">
+                        <i>📋</i> Quejas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="committees.html" class="nav-link active">
+                        <i>🏛️</i> Comités
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reports.html" class="nav-link">
+                        <i>📈</i> Reportes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i>⚙️</i> Configuración
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+                    <a href="index.html" class="nav-link">
+                        <i>🚪</i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Gestión de Comités</h1>
+                <div class="user-info">
+                    Bienvenido, Admin | Último acceso: 25 Dic, 2024
+                </div>
+            </header>
+            
+            <div class="breadcrumb">
+                <a href="dashboard.html">Inicio</a>
+                <span>></span>
+                Gestión de Comités
+            </div>
+            
+            <!-- Encabezado de Gestión de Comités -->
+            <div class="flex flex-between flex-center mb-20">
+                <div>
+                    <h2 style="color: var(--accent-primary); margin-bottom: 5px;">Vista General de Comités</h2>
+                    <p style="color: var(--text-secondary); margin: 0;">Gestionar comités de evaluación y sus miembros</p>
+                </div>
+                <button class="btn btn-primary" data-action="add-committee">
+                    + Agregar Nuevo Comité
+                </button>
+            </div>
+            
+            <!-- Estadísticas de Comités -->
+            <div class="grid-3 mb-20">
+                <div class="kpi-card">
+                    <div class="kpi-number">4</div>
+                    <div class="kpi-label">Comités Activos</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">18</div>
+                    <div class="kpi-label">Total de Miembros</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">7</div>
+                    <div class="kpi-label">Casos Activos</div>
+                </div>
+            </div>
+            
+            <!-- Tarjetas de Comités -->
+            <div class="grid-2 mb-20">
+                <!-- Comité de Ética -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Comité de Ética</h3>
+                        <span class="status active">Activo</span>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 15px;">
+                            <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                                Responsable de investigar violaciones éticas y garantizar el cumplimiento de los estándares de integridad académica.
+                            </p>
+                            <div style="margin-bottom: 15px;">
+                                <strong>Presidente:</strong> Dra. Emily Rodriguez<br>
+                                <strong>Miembros:</strong> 5<br>
+                                <strong>Casos Activos:</strong> 4<br>
+                                <strong>Establecido:</strong> Enero 2020
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Miembros del Comité</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dra. Emily Rodriguez (Presidente)</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. Michael Chen</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dra. Anna Lee</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. Robert Taylor</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dra. María García</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-primary btn-sm" data-action="view-details">Ver Detalles</button>
+                            <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar Comité</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comité Académico -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Comité Académico</h3>
+                        <span class="status active">Activo</span>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 15px;">
+                            <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                                Maneja casos de mala conducta académica y disputas de evaluación, garantizando procedimientos de evaluación justos.
+                            </p>
+                            <div style="margin-bottom: 15px;">
+                                <strong>Presidente:</strong> Prof. John Anderson<br>
+                                <strong>Miembros:</strong> 6<br>
+                                <strong>Casos Activos:</strong> 3<br>
+                                <strong>Establecido:</strong> Marzo 2019
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Miembros del Comité</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. John Anderson (Presidente)</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dra. Sarah Johnson</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dra. Lisa Thompson</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. David Kim</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dra. Patricia Wilson</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. James Brown</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-primary btn-sm" data-action="view-details">Ver Detalles</button>
+                            <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar Comité</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comité de Asuntos Estudiantiles -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Comité de Asuntos Estudiantiles</h3>
+                        <span class="status pending">Inactivo</span>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 15px;">
+                            <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                                Revisa quejas estudiantiles y media disputas entre estudiantes y miembros del profesorado.
+                            </p>
+                            <div style="margin-bottom: 15px;">
+                                <strong>Presidente:</strong> Dra. Jennifer Martínez<br>
+                                <strong>Miembros:</strong> 4<br>
+                                <strong>Casos Activos:</strong> 0<br>
+                                <strong>Establecido:</strong> Septiembre 2021
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Miembros del Comité</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dra. Jennifer Martínez (Presidente)</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. Thomas Green</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dra. Michelle Davis</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. Steven Clark</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-primary btn-sm" data-action="view-details">Ver Detalles</button>
+                            <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar Comité</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comité de Revisión de Profesorado -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Comité de Revisión de Profesorado</h3>
+                        <span class="status active">Activo</span>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 15px;">
+                            <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                                Supervisa las evaluaciones de desempeño del profesorado y maneja recomendaciones de promoción y tenure.
+                            </p>
+                            <div style="margin-bottom: 15px;">
+                                <strong>Presidente:</strong> Dr. William Thompson<br>
+                                <strong>Miembros:</strong> 7<br>
+                                <strong>Casos Activos:</strong> 0<br>
+                                <strong>Establecido:</strong> Junio 2018
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Miembros del Comité</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dr. William Thompson (Presidente)</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. Nancy Rodriguez</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dr. Kevin Walsh</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. Laura Bennett</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dr. Christopher Lee</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Prof. Rachel Moore</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Dr. Mark Phillips</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-primary btn-sm" data-action="view-details">Ver Detalles</button>
+                            <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar Comité</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Actividad de Comités y Carga de Trabajo -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Actividad Reciente de Comités</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--accent-primary); background: var(--bg-secondary);">
+                            <strong>Nuevo caso asignado</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Comité de Ética - #Q2024-001</span><br>
+                            <small style="color: var(--accent-secondary);">Hace 4 horas</small>
+                        </div>
+                        <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--success); background: var(--bg-secondary);">
+                            <strong>Caso resuelto</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Comité Académico - #Q2024-003</span><br>
+                            <small style="color: var(--accent-secondary);">Hace 2 días</small>
+                        </div>
+                        <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--warning); background: var(--bg-secondary);">
+                            <strong>Reunión de comité programada</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Comité de Ética - Revisión Mensual</span><br>
+                            <small style="color: var(--accent-secondary);">Hace 3 días</small>
+                        </div>
+                        <div style="padding: 10px; border-left: 3px solid var(--accent-secondary); background: var(--bg-secondary);">
+                            <strong>Nuevo miembro agregado</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">Comité Académico - Dra. Patricia Wilson</span><br>
+                            <small style="color: var(--accent-secondary);">Hace 1 semana</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Rendimiento de Comités</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Tiempos de Resolución de Casos (Promedio)</h4>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <span>Comité de Ética</span>
+                                    <span>21 días</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 70%; background: var(--accent-primary); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <span>Comité Académico</span>
+                                    <span>15 días</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 50%; background: var(--success); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <span>Asuntos Estudiantiles</span>
+                                    <span>12 días</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 40%; background: var(--accent-secondary); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Distribución de Carga de Trabajo Actual</h4>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Total de Casos Activos</span>
+                                <span style="font-weight: bold;">7</span>
+                            </div>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Comité de Ética</span>
+                                <span style="color: var(--warning); font-weight: bold;">4 (57%)</span>
+                            </div>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Comité Académico</span>
+                                <span style="color: var(--accent-primary); font-weight: bold;">3 (43%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tabla de Gestión de Comités -->
+            <div class="card mt-20">
+                <div class="card-header">
+                    <h3 class="card-title">Todos los Miembros de Comités</h3>
+                    <div>
+                        <button class="btn btn-secondary btn-sm" data-action="export-report">Exportar Lista</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Comité</th>
+                                <th>Cargo</th>
+                                <th>Departamento</th>
+                                <th>Tiempo de Servicio</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dra. Emily Rodriguez</td>
+                                <td>Comité de Ética</td>
+                                <td><span style="color: var(--accent-primary); font-weight: bold;">Presidente</span></td>
+                                <td>Filosofía</td>
+                                <td>4 años</td>
+                                <td><span class="status active">Activo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Prof. John Anderson</td>
+                                <td>Comité Académico</td>
+                                <td><span style="color: var(--accent-primary); font-weight: bold;">Presidente</span></td>
+                                <td>Asuntos Académicos</td>
+                                <td>5 años</td>
+                                <td><span class="status active">Activo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dra. Jennifer Martínez</td>
+                                <td>Comité de Asuntos Estudiantiles</td>
+                                <td><span style="color: var(--accent-primary); font-weight: bold;">Presidente</span></td>
+                                <td>Asuntos Estudiantiles</td>
+                                <td>3 años</td>
+                                <td><span class="status pending">Inactivo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dr. William Thompson</td>
+                                <td>Comité de Revisión de Profesorado</td>
+                                <td><span style="color: var(--accent-primary); font-weight: bold;">Presidente</span></td>
+                                <td>Administración</td>
+                                <td>6 años</td>
+                                <td><span class="status active">Activo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Prof. Michael Chen</td>
+                                <td>Comité de Ética</td>
+                                <td>Miembro</td>
+                                <td>Física</td>
+                                <td>2 años</td>
+                                <td><span class="status active">Activo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dra. Sarah Johnson</td>
+                                <td>Comité Académico</td>
+                                <td>Miembro</td>
+                                <td>Matemáticas</td>
+                                <td>1 año</td>
+                                <td><span class="status active">Activo</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="navigation.js"></script>
+</body>
+</html>

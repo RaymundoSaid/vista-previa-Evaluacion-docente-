@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes y KPIs - Evaluación Docente 360°</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <h2>ED360°</h2>
+                <span>Plataforma de Evaluación Docente</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i>📊</i> Panel de Control 
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link">
+                        <i>👥</i> Usuarios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="evaluations.html" class="nav-link">
+                        <i>📝</i> Evaluaciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="complaints.html" class="nav-link">
+                        <i>📋</i> Quejas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="committees.html" class="nav-link">
+                        <i>🏛️</i> Comités
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reports.html" class="nav-link active">
+                        <i>📈</i> Reportes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i>⚙️</i> Configuración
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+                    <a href="index.html" class="nav-link">
+                        <i>🚪</i> Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Reportes y Analíticas</h1>
+                <div class="user-info">
+                    Bienvenido, Administrador | Último acceso: 25 Dic 2024
+                </div>
+            </header>
+            
+            <div class="breadcrumb">
+                <a href="dashboard.html">Inicio</a>
+                <span>></span>
+                Reportes y KPIs
+            </div>
+            
+            <!-- Encabezado -->
+            <div class="flex flex-between flex-center mb-20">
+                <div>
+                    <h2 style="color: var(--accent-primary); margin-bottom: 5px;">Panel de Analíticas</h2>
+                    <p style="color: var(--text-secondary); margin: 0;">Reportes completos e indicadores clave de desempeño</p>
+                </div>
+                <button class="btn btn-primary" data-action="export-report">
+                    📊 Generar Reporte Personalizado
+                </button>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="card mb-20">
+                <div class="card-header">
+                    <h3 class="card-title">Filtros de Reporte</h3>
+                </div>
+                <div class="card-body">
+                    <div class="grid-3">
+                        <div class="form-group mb-0">
+                            <label class="form-label">Periodo</label>
+                            <select class="form-control">
+                                <option value="current-year">Año Actual (2024)</option>
+                                <option value="last-year">Año Pasado (2023)</option>
+                                <option value="spring-2024">Primavera 2024</option>
+                                <option value="fall-2024">Otoño 2024</option>
+                                <option value="custom">Rango Personalizado</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Facultad/Departamento</label>
+                            <select class="form-control">
+                                <option value="all">Todos los Departamentos</option>
+                                <option value="mathematics">Matemáticas</option>
+                                <option value="physics">Física</option>
+                                <option value="chemistry">Química</option>
+                                <option value="biology">Biología</option>
+                                <option value="computer-science">Computación</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Nivel Docente</label>
+                            <select class="form-control">
+                                <option value="all">Todos</option>
+                                <option value="professor">Profesor Titular</option>
+                                <option value="associate">Profesor Asociado</option>
+                                <option value="assistant">Profesor Asistente</option>
+                                <option value="lecturer">Catedrático</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- KPIs -->
+            <div class="grid-3 mb-20">
+                <div class="kpi-card">
+                    <div class="kpi-number">4.2</div>
+                    <div class="kpi-label">Calificación Promedio</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">87%</div>
+                    <div class="kpi-label">Tasa de Respuesta</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">156</div>
+                    <div class="kpi-label">Evaluaciones Totales</div>
+                </div>
+            </div>
+            
+            <!-- Sección de Gráficas -->
+            <div class="grid-2 mb-20">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Tendencias de Evaluación</h3>
+                        <button class="btn btn-secondary btn-sm">Exportar</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-placeholder">
+                            📈 Gráfico de líneas: Puntajes de Evaluación en el Tiempo<br>
+                            <small style="color: var(--text-secondary);">Ene 2024 - Dic 2024</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Rendimiento por Departamento</h3>
+                        <button class="btn btn-secondary btn-sm">Exportar</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-placeholder">
+                            📊 Gráfico de barras: Calificación Promedio por Departamento<br>
+                            <small style="color: var(--text-secondary);">Año Académico Actual</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Análisis de Tasa de Respuesta</h3>
+                        <button class="btn btn-secondary btn-sm">Exportar</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-placeholder">
+                            🥧 Gráfico de pastel: Tasa de Respuesta por Semestre<br>
+                            <small style="color: var(--text-secondary);">Primavera vs Otoño 2024</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Distribución de Desempeño Docente</h3>
+                        <button class="btn btn-secondary btn-sm">Exportar</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-placeholder">
+                            📊 Histograma: Distribución de Calificaciones Docentes<br>
+                            <small style="color: var(--text-secondary);">Todos los Docentes, Año Actual</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reportes Rápidos -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Reportes Rápidos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="display: grid; gap: 10px;">
+                            <button class="btn btn-secondary">📊 Resumen Semestral</button>
+                            <button class="btn btn-secondary">📈 Comparación por Departamento</button>
+                            <button class="btn btn-secondary">📋 Reportes por Docente</button>
+                            <button class="btn btn-secondary">📊 Análisis de Respuesta</button>
+                            <button class="btn btn-secondary">📈 Reporte de Tendencias</button>
+                            <button class="btn btn-secondary">📋 Analítica Personalizada</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Opciones de Exportación</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Formatos Disponibles</h4>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                            <button class="btn btn-secondary btn-sm">📄 PDF</button>
+                            <button class="btn btn-secondary btn-sm">📊 Excel</button>
+                            <button class="btn btn-secondary btn-sm">📊 CSV</button>
+                            <button class="btn btn-secondary btn-sm">📈 PowerPoint</button>
+                        </div>
+                        
+                        <h4 style="color: var(--accent-primary); margin: 20px 0 10px; font-size: 1rem;">Reportes Programados</h4>
+                        <div style="color: var(--text-secondary); margin-bottom: 10px;">
+                            <p style="margin: 5px 0; font-size: 0.9rem;">📅 Resumen semanal (Lunes)</p>
+                            <p style="margin: 5px 0; font-size: 0.9rem;">📅 Analítica mensual (1° de cada mes)</p>
+                            <p style="margin: 5px 0; font-size: 0.9rem;">📅 Reporte semestral (fin de ciclo)</p>
+                        </div>
+                        <button class="btn btn-primary btn-sm">Configurar Programación</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="navigation.js"></script>
+</body>
+</html>

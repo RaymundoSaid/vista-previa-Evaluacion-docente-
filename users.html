@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios - Evaluación Docente 360°</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral de navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <h2>ED360°</h2>
+                <span>Plataforma de Evaluación Docente</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i>📊</i> Panel de Control
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link active">
+                        <i>👥</i> Usuarios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="evaluations.html" class="nav-link">
+                        <i>📝</i> Evaluaciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="complaints.html" class="nav-link">
+                        <i>📋</i> Quejas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="committees.html" class="nav-link">
+                        <i>🏛️</i> Comités
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reports.html" class="nav-link">
+                        <i>📈</i> Reportes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i>⚙️</i> Configuración
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+                    <a href="index.html" class="nav-link">
+                        <i>🚪</i> Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Gestión de Usuarios</h1>
+                <div class="user-info">
+                    Bienvenido, Administrador | Último acceso: 25 Dic 2024
+                </div>
+            </header>
+            
+            <div class="breadcrumb">
+                <a href="dashboard.html">Inicio</a>
+                <span>></span>
+                Gestión de Usuarios
+            </div>
+            
+            <!-- Encabezado de Gestión de Usuarios -->
+            <div class="flex flex-between flex-center mb-20">
+                <div>
+                    <h2 style="color: var(--accent-primary); margin-bottom: 5px;">Usuarios del Sistema</h2>
+                    <p style="color: var(--text-secondary); margin: 0;">Administra los usuarios y sus permisos</p>
+                </div>
+                <button class="btn btn-primary" data-action="add-user">
+                    + Agregar Usuario
+                </button>
+            </div>
+            
+            <!-- Estadísticas de usuarios -->
+            <div class="grid-3 mb-20">
+                <div class="kpi-card">
+                    <div class="kpi-number">89</div>
+                    <div class="kpi-label">Usuarios Totales</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">67</div>
+                    <div class="kpi-label">Docentes Activos</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">15</div>
+                    <div class="kpi-label">Administradores</div>
+                </div>
+            </div>
+            
+            <!-- Filtros y búsqueda -->
+            <div class="card mb-20">
+                <div class="card-body">
+                    <div class="grid-3">
+                        <div class="form-group mb-0">
+                            <label class="form-label">Buscar Usuario</label>
+                            <input type="text" class="form-control" placeholder="Buscar por nombre o correo...">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Filtrar por Rol</label>
+                            <select class="form-control">
+                                <option value="">Todos</option>
+                                <option value="admin">Administrador</option>
+                                <option value="teacher">Docente</option>
+                                <option value="committee">Miembro de Comité</option>
+                                <option value="student">Estudiante</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Filtrar por Estado</label>
+                            <select class="form-control">
+                                <option value="">Todos</option>
+                                <option value="active">Activo</option>
+                                <option value="inactive">Inactivo</option>
+                                <option value="pending">Pendiente</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tabla de usuarios -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Lista de Usuarios</h3>
+                    <div>
+                        <button class="btn btn-secondary btn-sm" data-action="export-report">Exportar</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Rol</th>
+                                <th>Institución/Departamento</th>
+                                <th>Estado</th>
+                                <th>Último Acceso</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dra. Sarah Johnson</td>
+                                <td>sarah.johnson@universidad.edu</td>
+                                <td>Docente</td>
+                                <td>Departamento de Matemáticas</td>
+                                <td><span class="status active">Activo</span></td>
+                                <td>24 Dic 2024</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-danger btn-sm" data-action="delete-user">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Prof. Michael Chen</td>
+                                <td>michael.chen@universidad.edu</td>
+                                <td>Docente</td>
+                                <td>Departamento de Física</td>
+                                <td><span class="status active">Activo</span></td>
+                                <td>23 Dic 2024</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-danger btn-sm" data-action="delete-user">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Dra. Emily Rodríguez</td>
+                                <td>emily.rodriguez@universidad.edu</td>
+                                <td>Miembro de Comité</td>
+                                <td>Comité de Ética</td>
+                                <td><span class="status active">Activo</span></td>
+                                <td>22 Dic 2024</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-danger btn-sm" data-action="delete-user">Eliminar</button>
+                                </td>
+                            </tr>
+                            <!-- Aquí continuarían los demás registros traducidos -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Paginación -->
+            <div class="flex flex-between flex-center mt-20">
+                <div style="color: var(--text-secondary);">
+                    Mostrando 1-10 de 89 usuarios
+                </div>
+                <div>
+                    <button class="btn btn-secondary btn-sm" disabled>Anterior</button>
+                    <button class="btn btn-primary btn-sm">1</button>
+                    <button class="btn btn-secondary btn-sm">2</button>
+                    <button class="btn btn-secondary btn-sm">3</button>
+                    <button class="btn btn-secondary btn-sm">Siguiente</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Docente - Evaluación Docente 360°</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral de navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <h2>ED360°</h2>
+                <span>Plataforma de Evaluación Docente</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="perfil.html" class="nav-link active">
+                        <i>👤</i> Mi Perfil
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="mis-evaluaciones.html" class="nav-link">
+                        <i>📝</i> Mis Evaluaciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="retroalimentacion.html" class="nav-link">
+                        <i>💬</i> Retroalimentación
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="mi-horario.html" class="nav-link">
+                        <i>📅</i> Horario
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="recursos.html" class="nav-link">
+                        <i>📚</i> Recursos
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+                    <a href="index.html" class="nav-link">
+                        <i>🚪</i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Perfil del Docente</h1>
+                <div class="user-info">
+                    Bienvenido(a), Dr. Juan Pérez | Departamento de Matemáticas
+                </div>
+            </header>
+            
+            <div class="breadcrumb">
+                <a href="perfil.html">Inicio</a>
+                <span>></span>
+                Mi Perfil
+            </div>
+            
+            <!-- Encabezado del perfil -->
+            <div class="flex flex-between flex-center mb-20">
+                <div>
+                    <h2 style="color: var(--accent-primary); margin-bottom: 5px;">Perfil Personal</h2>
+                    <p style="color: var(--text-secondary); margin: 0;">Consulta y gestiona la información de tu perfil</p>
+                </div>
+                <button class="btn btn-primary" data-action="edit-user">
+                    ✏️ Editar Perfil
+                </button>
+            </div>
+            
+            <!-- Información del perfil -->
+            <div class="grid-2 mb-20">
+                <!-- Información básica -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Información Básica</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">
+                                JP
+                            </div>
+                            <h3 style="color: var(--text-primary); margin-bottom: 5px;">Dr. Juan Pérez</h3>
+                            <p style="color: var(--text-secondary); margin: 0;">Profesor de Matemáticas</p>
+                        </div>
+                        
+                        <div>
+                            <div style="margin-bottom: 15px;">
+                                <strong>ID Empleado:</strong> EMP-2020-045<br>
+                                <strong>Departamento:</strong> Matemáticas<br>
+                                <strong>Puesto:</strong> Profesor<br>
+                                <strong>Oficina:</strong> Edificio de Matemáticas, Aula 204<br>
+                                <strong>Teléfono:</strong> (555) 123-4567<br>
+                                <strong>Email:</strong> juan.perez@universidad.edu
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <strong>Fecha de Ingreso:</strong> 15 de agosto de 2020<br>
+                                <strong>Años de Servicio:</strong> 4 años<br>
+                                <strong>Estatus:</strong> <span class="status active">Activo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Información académica -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Información Académica</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Formación Académica</h4>
+                            <div style="margin-bottom: 10px; padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                                <strong>Doctorado en Matemáticas</strong><br>
+                                <small style="color: var(--text-secondary);">UNAM (2018)</small>
+                            </div>
+                            <div style="margin-bottom: 10px; padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                                <strong>Maestría en Matemáticas Aplicadas</strong><br>
+                                <small style="color: var(--text-secondary);">ITESM (2014)</small>
+                            </div>
+                            <div style="padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                                <strong>Licenciatura en Matemáticas</strong><br>
+                                <small style="color: var(--text-secondary);">UAM (2012)</small>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Líneas de Investigación</h4>
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Topología Algebraica</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Geometría Diferencial</span>
+                                <span style="background: var(--bg-secondary); padding: 5px 10px; border-radius: 12px; font-size: 0.8rem;">Análisis Matemático</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Cursos Actuales</h4>
+                            <div style="margin-bottom: 5px;">• MAT 201 - Cálculo II</div>
+                            <div style="margin-bottom: 5px;">• MAT 350 - Álgebra Lineal Avanzada</div>
+                            <div style="margin-bottom: 5px;">• MAT 485 - Topología</div>
+                            <div>• MAT 590 - Seminario de Investigación</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                    <!-- Resumen de Evaluación -->
+            <div class="card mb-20">
+                <div class="card-header">
+                    <h3 class="card-title">Resumen de Mis Evaluaciones</h3>
+                </div>
+                <div class="card-body">
+                    <div class="grid-3 mb-20">
+                        <div class="kpi-card">
+                            <div class="kpi-number">4.7</div>
+                            <div class="kpi-label">Calificación General</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-number">156</div>
+                            <div class="kpi-label">Respuestas Totales</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-number">92%</div>
+                            <div class="kpi-label">Tasa de Respuesta</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-2">
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Desglose de Calificaciones</h4>
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <span>Efectividad Docente</span>
+                                    <span style="color: var(--success); font-weight: bold;">4.8</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 96%; background: var(--success); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <span>Organización del Curso</span>
+                                    <span style="color: var(--success); font-weight: bold;">4.6</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 92%; background: var(--accent-primary); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <span>Participación Estudiantil</span>
+                                    <span style="color: var(--success); font-weight: bold;">4.5</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 90%; background: var(--accent-secondary); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                                    <span>Disponibilidad y Apoyo</span>
+                                    <span style="color: var(--success); font-weight: bold;">4.9</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 98%; background: var(--success); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Comentarios Recientes</h4>
+                            <div style="margin-bottom: 15px; padding: 10px; background: var(--bg-secondary); border-radius: 5px; border-left: 3px solid var(--success);">
+                                <p style="margin: 0; font-size: 0.9rem;">"El estilo de enseñanza del Dr. Pérez es excepcional. Hace que los conceptos matemáticos complejos sean fáciles de entender."</p>
+                                <small style="color: var(--text-secondary);">- Evaluación Primavera 2024</small>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px; padding: 10px; background: var(--bg-secondary); border-radius: 5px; border-left: 3px solid var(--accent-primary);">
+                                <p style="margin: 0; font-size: 0.9rem;">"Siempre disponible en sus horarios de atención y brinda una excelente retroalimentación en las tareas."</p>
+                                <small style="color: var(--text-secondary);">- Evaluación Otoño 2024</small>
+                            </div>
+                            
+                            <div style="padding: 10px; background: var(--bg-secondary); border-radius: 5px; border-left: 3px solid var(--success);">
+                                <p style="margin: 0; font-size: 0.9rem;">"Su pasión por las matemáticas es contagiosa. El curso de topología fue desafiante pero muy gratificante."</p>
+                                <small style="color: var(--text-secondary);">- Evaluación Primavera 2024</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evaluaciones Recientes -->
+            <div class="grid-2 mb-20">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Mis Evaluaciones Recientes</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 15px; padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <strong>Otoño 2024 - MAT 201</strong>
+                                <span class="status active">Completada</span>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <span>Calificación: <strong style="color: var(--success);">4.8/5.0</strong></span><br>
+                                <span>Respuestas: 42/45 (93%)</span>
+                            </div>
+                            <button class="btn btn-secondary btn-sm" data-action="view-details">Ver Detalles</button>
+                        </div>
+                        
+                        <div style="margin-bottom: 15px; padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <strong>Otoño 2024 - MAT 350</strong>
+                                <span class="status active">Completada</span>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <span>Calificación: <strong style="color: var(--success);">4.6/5.0</strong></span><br>
+                                <span>Respuestas: 28/30 (93%)</span>
+                            </div>
+                            <button class="btn btn-secondary btn-sm" data-action="view-details">Ver Detalles</button>
+                        </div>
+                        
+                        <div style="padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <strong>Primavera 2025 - MAT 485</strong>
+                                <span class="status pending">En Progreso</span>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <span>Calificación Actual: <strong style="color: var(--accent-primary);">4.7/5.0</strong></span><br>
+                                <span>Respuestas: 12/18 (67%)</span>
+                            </div>
+                            <button class="btn btn-secondary btn-sm" data-action="view-details">Ver Progreso</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Desarrollo Profesional</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Actividades Recientes</h4>
+                            <div style="margin-bottom: 10px; padding: 8px; background: var(--bg-secondary); border-radius: 5px;">
+                                <strong>Taller: "Métodos Modernos de Enseñanza"</strong><br>
+                                <small style="color: var(--text-secondary);">Completado: 10 Dic 2024</small>
+                            </div>
+                            <div style="margin-bottom: 10px; padding: 8px; background: var(--bg-secondary); border-radius: 5px;">
+                                <strong>Congreso: "Simposio de Educación Matemática"</strong><br>
+                                <small style="color: var(--text-secondary);">Asistencia: 15-17 Nov 2024</small>
+                            </div>
+                            <div style="padding: 8px; background: var(--bg-secondary); border-radius: 5px;">
+                                <strong>Certificación: "Tecnologías para el Aprendizaje en Línea"</strong><br>
+                                <small style="color: var(--text-secondary);">Obtenida: 25 Oct 2024</small>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Publicaciones (2024)</h4>
+                            <div style="font-size: 0.9rem; line-height: 1.4;">
+                                • "Métodos Topológicos Avanzados en Análisis" - Revista de Matemáticas<br>
+                                • "Enseñando Cálculo en la Era Digital" - Reseña Educativa<br>
+                                • "Enfoques Geométricos para la Resolución de Problemas" - Cuadernos Matemáticos
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Participación en Comités</h4>
+                            <div style="font-size: 0.9rem;">
+                                • Comité de Planes de Estudio (2023-presente)<br>
+                                • Senado Académico (2022-presente)<br>
+                                • Comité de Admisiones de Posgrado (2021-2024)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metas y Acciones -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Metas Profesionales y Acciones</h3>
+                </div>
+                <div class="card-body">
+                    <div class="grid-2">
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Metas Actuales</h4>
+                            <div style="margin-bottom: 15px; padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <strong>Mejorar la Participación Estudiantil</strong>
+                                    <span style="color: var(--accent-primary); font-weight: bold;">75%</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-primary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 75%; background: var(--accent-primary); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                                <small style="color: var(--text-secondary);">Meta: Implementar técnicas de aprendizaje interactivo</small>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px; padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <strong>Publicaciones de Investigación</strong>
+                                    <span style="color: var(--accent-secondary); font-weight: bold;">50%</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-primary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 50%; background: var(--accent-secondary); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                                <small style="color: var(--text-secondary);">Meta: Enviar 2 artículos a revistas arbitradas</small>
+                            </div>
+                            
+                            <div style="padding: 10px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <strong>Integración de Tecnología</strong>
+                                    <span style="color: var(--success); font-weight: bold;">90%</span>
+                                </div>
+                                <div style="width: 100%; background: var(--bg-primary); border-radius: 5px; height: 6px;">
+                                    <div style="width: 90%; background: var(--success); height: 100%; border-radius: 5px;"></div>
+                                </div>
+                                <small style="color: var(--text-secondary);">Meta: Integrar herramientas digitales en todos los cursos</small>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Acciones Pendientes</h4>
+                            <div style="margin-bottom: 10px; padding: 10px; background: var(--bg-secondary); border-radius: 5px; border-left: 3px solid var(--warning);">
+                                <strong>Completar Autoevaluación</strong><br>
+                                <small style="color: var(--text-secondary);">Entrega: 15 Ene 2025</small><br>
+                                <button class="btn btn-primary btn-sm mt-10" data-action="edit-user">Iniciar Autoevaluación</button>
+                            </div>
+                            
+                            <div style="margin-bottom: 10px; padding: 10px; background: var(--bg-secondary); border-radius: 5px; border-left: 3px solid var(--accent-primary);">
+                                <strong>Revisar Retroalimentación Estudiantil</strong><br>
+                                <small style="color: var(--text-secondary);">Nueva retroalimentación disponible para MAT 485</small><br>
+                                <button class="btn btn-secondary btn-sm mt-10" data-action="view-details">Ver Retroalimentación</button>
+                            </div>
+                            
+                            <div style="margin-bottom: 10px; padding: 10px; background: var(--bg-secondary); border-radius: 5px; border-left: 3px solid var(--success);">
+                                <strong>Actualizar Materiales de Curso</strong><br>
+                                <small style="color: var(--text-secondary);">Preparar materiales para Primavera 2025</small><br>
+                                <button class="btn btn-secondary btn-sm mt-10" data-action="edit-user">Actualizar Materiales</button>
+                            </div>
+                            
+                            <div style="padding: 10px; background: var(--bg-secondary); border-radius: 5px; border-left: 3px solid var(--accent-secondary);">
+                                <strong>Programar Horarios de Atención</strong><br>
+                                <small style="color: var(--text-secondary);">Definir disponibilidad para el próximo semestre</small><br>
+                                <button class="btn btn-secondary btn-sm mt-10" data-action="edit-user">Actualizar Horario</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <script src="navigation.js"></script>
+</body>
+</html>

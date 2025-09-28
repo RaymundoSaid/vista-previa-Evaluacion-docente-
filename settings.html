@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - Evaluación Docente 360°</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra Lateral de Navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <h2>ED360°</h2>
+                <span>Plataforma de Evaluación Docente</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i>📊</i> Panel de Control
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link">
+                        <i>👥</i> Usuarios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="evaluations.html" class="nav-link">
+                        <i>📝</i> Evaluaciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="complaints.html" class="nav-link">
+                        <i>📋</i> Quejas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="committees.html" class="nav-link">
+                        <i>🏛️</i> Comités
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reports.html" class="nav-link">
+                        <i>📈</i> Reportes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link active">
+                        <i>⚙️</i> Configuración
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+                    <a href="index.html" class="nav-link">
+                        <i>🚪</i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Configuración del Sistema</h1>
+                <div class="user-info">
+                    Bienvenido, Admin | Último acceso: 25 Dic, 2024
+                </div>
+            </header>
+            
+            <div class="breadcrumb">
+                <a href="dashboard.html">Inicio</a>
+                <span>></span>
+                Configuración
+            </div>
+            
+            <!-- Encabezado de Configuración -->
+            <div class="flex flex-between flex-center mb-20">
+                <div>
+                    <h2 style="color: var(--accent-primary); margin-bottom: 5px;">Configuración de la Plataforma</h2>
+                    <p style="color: var(--text-secondary); margin: 0;">Gestionar configuraciones del sistema</p>
+                </div>
+                <button class="btn btn-primary" data-action="save-settings">
+                    💾 Guardar Todos los Cambios
+                </button>
+            </div>
+            
+            <!-- Secciones de Configuración -->
+            <div class="grid-2 mb-20">
+                <!-- Configuración General -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Configuración General</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label">Nombre de la Plataforma</label>
+                            <input type="text" class="form-control" value="Evaluación Docente 360°" placeholder="Ingrese el nombre de la plataforma">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Nombre de la Institución</label>
+                            <input type="text" class="form-control" value="Universidad de Excelencia" placeholder="Ingrese el nombre de la institución">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email del Administrador</label>
+                            <input type="email" class="form-control" value="admin@universidad.edu" placeholder="Ingrese email del administrador">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Zona Horaria</label>
+                            <select class="form-control">
+                                <option value="UTC">UTC (Tiempo Universal Coordinado)</option>
+                                <option value="EST" selected>EST (Hora Estándar del Este)</option>
+                                <option value="PST">PST (Hora Estándar del Pacífico)</option>
+                                <option value="CST">CST (Hora Estándar Central)</option>
+                                <option value="MST">MST (Hora Estándar de Montaña)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mb-0">
+                            <label class="form-label">Idioma</label>
+                            <select class="form-control">
+                                <option value="es" selected>Español</option>
+                                <option value="en">Inglés</option>
+                                <option value="fr">Francés</option>
+                                <option value="de">Alemán</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Configuración de Evaluaciones -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Configuración de Evaluaciones</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label">Período de Evaluación Predeterminado (Días)</label>
+                            <input type="number" class="form-control" value="30" placeholder="Ingrese el período predeterminado">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Tasa Mínima de Respuesta (%)</label>
+                            <input type="number" class="form-control" value="60" placeholder="Ingrese el porcentaje mínimo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Evaluaciones Anónimas</label>
+                            <select class="form-control">
+                                <option value="enabled" selected>Habilitadas</option>
+                                <option value="disabled">Deshabilitadas</option>
+                                <option value="optional">Opcional</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Frecuencia de Recordatorios Automáticos</label>
+                            <select class="form-control">
+                                <option value="daily">Diario</option>
+                                <option value="weekly" selected>Semanal</option>
+                                <option value="biweekly">Quincenal</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mb-0">
+                            <label class="form-label">Habilitar Autoevaluación</label>
+                            <div style="margin-top: 8px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Permitir que los docentes completen autoevaluaciones
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Configuración de Notificaciones -->
+            <div class="card mb-20">
+                <div class="card-header">
+                    <h3 class="card-title">Configuración de Notificaciones</h3>
+                </div>
+                <div class="card-body">
+                    <div class="grid-3">
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Notificaciones por Email</h4>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Nueva evaluación asignada
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Recordatorio de fecha límite de evaluación
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" style="margin-right: 8px;">
+                                    Nueva queja presentada
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Asignación de comité
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Alertas del Sistema</h4>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Tasas de respuesta bajas
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Mantenimiento del sistema
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" style="margin-right: 8px;">
+                                    Estado de respaldo de datos
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Alertas de seguridad
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Notificaciones de Reportes</h4>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Resúmenes semanales
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" style="margin-right: 8px;">
+                                    Análisis mensuales
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Reportes semestrales
+                                </label>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" style="margin-right: 8px;">
+                                    Finalización de reportes personalizados
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Configuración de Seguridad -->
+            <div class="grid-2 mb-20">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Configuración de Seguridad</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label">Política de Contraseñas</label>
+                            <select class="form-control">
+                                <option value="basic">Básica (8+ caracteres)</option>
+                                <option value="medium" selected>Media (8+ caracteres, mayúsculas/minúsculas, números)</option>
+                                <option value="strong">Fuerte (12+ caracteres, mixto, símbolos)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Tiempo de Expiración de Sesión (Minutos)</label>
+                            <input type="number" class="form-control" value="60" placeholder="Ingrese tiempo en minutos">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Autenticación de Dos Factores</label>
+                            <select class="form-control">
+                                <option value="disabled">Deshabilitada</option>
+                                <option value="optional" selected>Opcional</option>
+                                <option value="required">Requerida</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mb-0">
+                            <label class="form-label">Límite de Intentos de Acceso</label>
+                            <input type="number" class="form-control" value="5" placeholder="Máximo de intentos fallidos">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Datos y Privacidad -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Datos y Privacidad</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label">Período de Retención de Datos (Años)</label>
+                            <input type="number" class="form-control" value="7" placeholder="Ingrese período de retención">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Frecuencia de Respaldo</label>
+                            <select class="form-control">
+                                <option value="daily" selected>Diario</option>
+                                <option value="weekly">Semanal</option>
+                                <option value="monthly">Mensual</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Formato de Exportación de Datos</label>
+                            <select class="form-control">
+                                <option value="json">JSON</option>
+                                <option value="csv" selected>CSV</option>
+                                <option value="xml">XML</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mb-0">
+                            <label class="form-label">Cumplimiento GDPR</label>
+                            <div style="margin-top: 8px;">
+                                <label style="display: flex; align-items: center; font-weight: normal;">
+                                    <input type="checkbox" checked style="margin-right: 8px;">
+                                    Habilitar funciones de cumplimiento GDPR
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Plantillas Legales -->
+            <div class="card mb-20">
+                <div class="card-header">
+                    <h3 class="card-title">Plantillas Legales y Documentación</h3>
+                </div>
+                <div class="card-body">
+                    <div class="grid-2">
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Términos y Políticas</h4>
+                            <div style="margin-bottom: 15px; padding: 15px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span><strong>Términos de Servicio</strong></span>
+                                    <span class="status active">Activo</span>
+                                </div>
+                                <small style="color: var(--text-secondary);">Última actualización: 1 Dic, 2024</small><br>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Vista Previa</button>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px; padding: 15px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span><strong>Política de Privacidad</strong></span>
+                                    <span class="status active">Activo</span>
+                                </div>
+                                <small style="color: var(--text-secondary);">Última actualización: 15 Nov, 2024</small><br>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Vista Previa</button>
+                                </div>
+                            </div>
+                            
+                            <div style="padding: 15px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span><strong>Política de Cookies</strong></span>
+                                    <span class="status pending">Borrador</span>
+                                </div>
+                                <small style="color: var(--text-secondary);">Última actualización: 20 Oct, 2024</small><br>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Vista Previa</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 15px; font-size: 1rem;">Plantillas de Evaluación</h4>
+                            <div style="margin-bottom: 15px; padding: 15px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span><strong>Formulario de Evaluación Estudiantil</strong></span>
+                                    <span class="status active">Activo</span>
+                                </div>
+                                <small style="color: var(--text-secondary);">Plantilla estándar para evaluaciones estudiantiles</small><br>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Vista Previa</button>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 15px; padding: 15px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span><strong>Plantilla de Revisión de Pares</strong></span>
+                                    <span class="status active">Activo</span>
+                                </div>
+                                <small style="color: var(--text-secondary);">Plantilla para evaluaciones entre pares</small><br>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Vista Previa</button>
+                                </div>
+                            </div>
+                            
+                            <div style="padding: 15px; background: var(--bg-secondary); border-radius: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                    <span><strong>Formulario de Autoevaluación</strong></span>
+                                    <span class="status pending">Borrador</span>
+                                </div>
+                                <small style="color: var(--text-secondary);">Plantilla para autoevaluación docente</small><br>
+                                <div style="margin-top: 10px;">
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user">Editar</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Vista Previa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Información del Sistema -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Información del Sistema</h3>
+                </div>
+                <div class="card-body">
+                    <div class="grid-3">
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Detalles de la Plataforma</h4>
+                            <div style="margin-bottom: 5px;">
+                                <strong>Versión:</strong> 2.1.4
+                            </div>
+                            <div style="margin-bottom: 5px;">
+                                <strong>Última Actualización:</strong> 15 Dic, 2024
+                            </div>
+                            <div style="margin-bottom: 5px;">
+                                <strong>Entorno:</strong> Producción
+                            </div>
+                            <div>
+                                <strong>Licencia:</strong> Empresarial
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Estado de la Base de Datos</h4>
+                            <div style="margin-bottom: 5px;">
+                                <strong>Conexión:</strong> <span style="color: var(--success);">Saludable</span>
+                            </div>
+                            <div style="margin-bottom: 5px;">
+                                <strong>Tamaño:</strong> 2.4 GB
+                            </div>
+                            <div style="margin-bottom: 5px;">
+                                <strong>Último Respaldo:</strong> Hoy, 2:00 AM
+                            </div>
+                            <div>
+                                <strong>Tiempo Activo:</strong> 47 días
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Acciones Rápidas</h4>
+                            <div style="display: grid; gap: 8px;">
+                                <button class="btn btn-secondary btn-sm" data-action="export-report">📊 Verificación de Salud del Sistema</button>
+                                <button class="btn btn-secondary btn-sm" data-action="export-report">💾 Crear Respaldo</button>
+                                <button class="btn btn-secondary btn-sm" data-action="export-report">📋 Ver Registros</button>
+                                <button class="btn btn-warning btn-sm" data-action="edit-user">🔄 Reiniciar Servicios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="navigation.js"></script>
+</body>
+</html>

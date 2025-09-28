@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluaciones - Evaluación Docente 360°</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra lateral de navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <h2>ED360°</h2>
+                <span>Plataforma de Evaluación Docente</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i>📊</i> Panel de Control
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link">
+                        <i>👥</i> Usuarios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="evaluations.html" class="nav-link active">
+                        <i>📝</i> Evaluaciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="complaints.html" class="nav-link">
+                        <i>📋</i> Quejas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="committees.html" class="nav-link">
+                        <i>🏛️</i> Comités
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reports.html" class="nav-link">
+                        <i>📈</i> Reportes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i>⚙️</i> Configuración
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+                    <a href="index.html" class="nav-link">
+                        <i>🚪</i> Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Gestión de Evaluaciones</h1>
+                <div class="user-info">
+                    Bienvenido, Administrador | Último acceso: 25 Dic 2024
+                </div>
+            </header>
+            
+            <div class="breadcrumb">
+                <a href="dashboard.html">Inicio</a>
+                <span>></span>
+                Evaluaciones
+            </div>
+            
+            <!-- Encabezado de Evaluaciones -->
+            <div class="flex flex-between flex-center mb-20">
+                <div>
+                    <h2 style="color: var(--accent-primary); margin-bottom: 5px;">Ciclos de Evaluación</h2>
+                    <p style="color: var(--text-secondary); margin: 0;">Administra los ciclos de evaluación docente y sus encuestas</p>
+                </div>
+                <button class="btn btn-primary" data-action="add-evaluation">
+                    + Crear Nueva Evaluación
+                </button>
+            </div>
+            
+            <!-- Estadísticas de Evaluación -->
+            <div class="grid-3 mb-20">
+                <div class="kpi-card">
+                    <div class="kpi-number">24</div>
+                    <div class="kpi-label">Evaluaciones Activas</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">156</div>
+                    <div class="kpi-label">Respuestas Completadas</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">12</div>
+                    <div class="kpi-label">Revisiones Pendientes</div>
+                </div>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="card mb-20">
+                <div class="card-body">
+                    <div class="grid-3">
+                        <div class="form-group mb-0">
+                            <label class="form-label">Buscar Evaluaciones</label>
+                            <input type="text" class="form-control" placeholder="Buscar por título o docente...">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Filtrar por Estado</label>
+                            <select class="form-control">
+                                <option value="">Todos</option>
+                                <option value="active">Activa</option>
+                                <option value="completed">Completada</option>
+                                <option value="pending">Pendiente</option>
+                                <option value="draft">Borrador</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Filtrar por Periodo</label>
+                            <select class="form-control">
+                                <option value="">Todos</option>
+                                <option value="spring2024">Primavera 2024</option>
+                                <option value="fall2024">Otoño 2024</option>
+                                <option value="winter2025">Invierno 2025</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ciclos de Evaluación -->
+            <div class="grid-2">
+                <!-- Primavera 2025 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Evaluación Primavera 2025</h3>
+                        <span class="status active">Activa</span>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                            Evaluación docente integral del semestre de primavera: retroalimentación de estudiantes, pares académicos y autoevaluación.
+                        </p>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Periodo:</strong> 1 Marzo - 30 Abril 2025<br>
+                            <strong>Participantes:</strong> 45 docentes<br>
+                            <strong>Respuestas:</strong> 234 / 450 (52%)
+                        </div>
+                        <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 8px; margin-bottom: 10px;">
+                            <div style="width: 52%; background: var(--accent-primary); height: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="survey.html" class="btn btn-primary btn-sm">Ver Encuesta</a>
+                            <button class="btn btn-secondary btn-sm" data-action="view-results">Ver Resultados</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Otoño 2024 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Evaluación Otoño 2024</h3>
+                        <span class="status pending">Pendiente</span>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                            Evaluación del semestre de otoño con enfoque en efectividad docente y métricas de participación estudiantil.
+                        </p>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Periodo:</strong> 1 Noviembre - 15 Diciembre 2024<br>
+                            <strong>Participantes:</strong> 52 docentes<br>
+                            <strong>Respuestas:</strong> 387 / 520 (74%)
+                        </div>
+                        <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 8px; margin-bottom: 10px;">
+                            <div style="width: 74%; background: var(--accent-secondary); height: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="survey.html" class="btn btn-primary btn-sm">Ver Encuesta</a>
+                            <button class="btn btn-secondary btn-sm" data-action="view-results">Ver Resultados</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Verano 2024 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Evaluación Verano 2024</h3>
+                        <span class="status active">Completada</span>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                            Evaluación de cursos intensivos en verano con foco en satisfacción estudiantil y calidad de enseñanza.
+                        </p>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Periodo:</strong> 1 Junio - 15 Agosto 2024<br>
+                            <strong>Participantes:</strong> 28 docentes<br>
+                            <strong>Respuestas:</strong> 168 / 168 (100%)
+                        </div>
+                        <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 8px; margin-bottom: 10px;">
+                            <div style="width: 100%; background: var(--success); height: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="survey.html" class="btn btn-primary btn-sm">Ver Encuesta</a>
+                            <button class="btn btn-secondary btn-sm" data-action="view-results">Ver Resultados</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Primavera 2024 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Evaluación Primavera 2024</h3>
+                        <span class="status active">Completada</span>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: var(--text-secondary); margin-bottom: 10px;">
+                            Evaluación integral del semestre de primavera: desempeño docente y retroalimentación curricular.
+                        </p>
+                        <div style="margin-bottom: 10px;">
+                            <strong>Periodo:</strong> 1 Marzo - 30 Abril 2024<br>
+                            <strong>Participantes:</strong> 48 docentes<br>
+                            <strong>Respuestas:</strong> 432 / 480 (90%)
+                        </div>
+                        <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 8px; margin-bottom: 10px;">
+                            <div style="width: 90%; background: var(--success); height: 100%; border-radius: 5px;"></div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="survey.html" class="btn btn-primary btn-sm">Ver Encuesta</a>
+                            <button class="btn btn-secondary btn-sm" data-action="view-results">Ver Resultados</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Actividades Recientes -->
+            <div class="card mt-20">
+                <div class="card-header">
+                    <h3 class="card-title">Actividades Recientes de Evaluación</h3>
+                </div>
+                <div class="card-body">
+                    <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--accent-primary); background: var(--bg-secondary);">
+                        <strong>Nueva respuesta enviada</strong><br>
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;">Dr. Hernández - Evaluación Primavera 2025</span><br>
+                        <small style="color: var(--accent-secondary);">Hace 2 horas</small>
+                    </div>
+                    <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--success); background: var(--bg-secondary);">
+                        <strong>Ciclo de evaluación finalizado</strong><br>
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;">Verano 2024 - Todas las respuestas recolectadas</span><br>
+                        <small style="color: var(--accent-secondary);">Hace 1 día</small>
+                    </div>
+                    <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--warning); background: var(--bg-secondary);">
+                        <strong>Fecha límite de evaluación cercana</strong><br>
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;">Otoño 2024 - Quedan 5 días</span><br>
+                        <small style="color: var(--accent-secondary);">Hace 3 días</small>
+                    </div>
+                    <div style="padding: 10px; border-left: 3px solid var(--accent-secondary); background: var(--bg-secondary);">
+                        <strong>Nueva plantilla de evaluación creada</strong><br>
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;">Plantilla Invierno 2025 - Lista para uso</span><br>
+                        <small style="color: var(--accent-secondary);">Hace 1 semana</small>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="navigation.js"></script>
+</body>
+</html>

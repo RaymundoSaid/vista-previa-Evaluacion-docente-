@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quejas y Reportes - Evaluación Docente 360°</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra Lateral de Navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <h2>ED360°</h2>
+                <span>Plataforma de Evaluación Docente</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i>📊</i> Panel de Control
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="users.html" class="nav-link">
+                        <i>👥</i> Usuarios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="evaluations.html" class="nav-link">
+                        <i>📝</i> Evaluaciones
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="complaints.html" class="nav-link active">
+                        <i>📋</i> Quejas
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="committees.html" class="nav-link">
+                        <i>🏛️</i> Comités
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reports.html" class="nav-link">
+                        <i>📈</i> Reportes
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i>⚙️</i> Configuración
+                    </a>
+                </li>
+                <li class="nav-item" style="margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 10px;">
+                    <a href="index.html" class="nav-link">
+                        <i>🚪</i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Quejas y Reportes</h1>
+                <div class="user-info">
+                    Bienvenido, Admin | Último acceso: 25 Dic, 2024
+                </div>
+            </header>
+            
+            <div class="breadcrumb">
+                <a href="dashboard.html">Inicio</a>
+                <span>></span>
+                Quejas y Reportes
+            </div>
+            
+            <!-- Encabezado de Gestión de Quejas -->
+            <div class="flex flex-between flex-center mb-20">
+                <div>
+                    <h2 style="color: var(--accent-primary); margin-bottom: 5px;">Gestión de Quejas</h2>
+                    <p style="color: var(--text-secondary); margin: 0;">Administrar y rastrear quejas formales y reportes</p>
+                </div>
+                <button class="btn btn-primary" data-action="new-complaint">
+                    + Nueva Queja
+                </button>
+            </div>
+            
+            <!-- Estadísticas de Quejas -->
+            <div class="grid-3 mb-20">
+                <div class="kpi-card">
+                    <div class="kpi-number">7</div>
+                    <div class="kpi-label">Quejas Pendientes</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">23</div>
+                    <div class="kpi-label">Total Este Año</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number">16</div>
+                    <div class="kpi-label">Casos Resueltos</div>
+                </div>
+            </div>
+            
+            <!-- Filtros y Búsqueda -->
+            <div class="card mb-20">
+                <div class="card-body">
+                    <div class="grid-3">
+                        <div class="form-group mb-0">
+                            <label class="form-label">Buscar Quejas</label>
+                            <input type="text" class="form-control" placeholder="Buscar por ID o descripción...">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Filtrar por Estado</label>
+                            <select class="form-control">
+                                <option value="">Todos los Estados</option>
+                                <option value="pending">Pendiente</option>
+                                <option value="investigating">En Investigación</option>
+                                <option value="resolved">Resuelto</option>
+                                <option value="dismissed">Desestimado</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="form-label">Filtrar por Categoría</label>
+                            <select class="form-control">
+                                <option value="">Todas las Categorías</option>
+                                <option value="academic">Mala Conducta Académica</option>
+                                <option value="ethics">Violación Ética</option>
+                                <option value="harassment">Acoso</option>
+                                <option value="discrimination">Discriminación</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tabla de Quejas -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Lista de Quejas</h3>
+                    <div>
+                        <button class="btn btn-secondary btn-sm" data-action="export-report">Exportar</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID de Queja</th>
+                                <th>Fecha de Presentación</th>
+                                <th>Categoría</th>
+                                <th>Docente Involucrado</th>
+                                <th>Estado</th>
+                                <th>Comité Asignado</th>
+                                <th>Prioridad</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>#Q2024-001</strong></td>
+                                <td>20 Dic, 2024</td>
+                                <td>Ética Académica</td>
+                                <td>Dr. Michael Chen</td>
+                                <td><span class="status pending">En Investigación</span></td>
+                                <td>Comité de Ética</td>
+                                <td><span class="status" style="background: var(--warning); color: var(--bg-primary);">Alta</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                    <button class="btn btn-primary btn-sm" data-action="edit-user">Actualizar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>#Q2024-002</strong></td>
+                                <td>15 Dic, 2024</td>
+                                <td>Acoso</td>
+                                <td>Prof. John Anderson</td>
+                                <td><span class="status pending">Pendiente</span></td>
+                                <td>Comité Académico</td>
+                                <td><span class="status" style="background: var(--danger); color: var(--text-primary);">Crítica</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                    <button class="btn btn-primary btn-sm" data-action="edit-user">Actualizar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>#Q2024-003</strong></td>
+                                <td>10 Dic, 2024</td>
+                                <td>Mala Conducta Académica</td>
+                                <td>Dra. Lisa Thompson</td>
+                                <td><span class="status active">Resuelto</span></td>
+                                <td>Comité Académico</td>
+                                <td><span class="status" style="background: var(--success); color: var(--text-primary);">Media</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user" disabled>Actualizar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>#Q2024-004</strong></td>
+                                <td>5 Dic, 2024</td>
+                                <td>Discriminación</td>
+                                <td>Prof. Robert Taylor</td>
+                                <td><span class="status pending">En Investigación</span></td>
+                                <td>Comité de Ética</td>
+                                <td><span class="status" style="background: var(--warning); color: var(--bg-primary);">Alta</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                    <button class="btn btn-primary btn-sm" data-action="edit-user">Actualizar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>#Q2024-005</strong></td>
+                                <td>28 Nov, 2024</td>
+                                <td>Violación Ética</td>
+                                <td>Dra. Anna Lee</td>
+                                <td><span class="status inactive">Desestimado</span></td>
+                                <td>Comité de Ética</td>
+                                <td><span style="color: var(--text-secondary);">Baja</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user" disabled>Actualizar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>#Q2024-006</strong></td>
+                                <td>22 Nov, 2024</td>
+                                <td>Ética Académica</td>
+                                <td>Dra. Sarah Johnson</td>
+                                <td><span class="status active">Resuelto</span></td>
+                                <td>Comité Académico</td>
+                                <td><span class="status" style="background: var(--success); color: var(--text-primary);">Media</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                    <button class="btn btn-secondary btn-sm" data-action="edit-user" disabled>Actualizar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>#Q2024-007</strong></td>
+                                <td>18 Nov, 2024</td>
+                                <td>Otro</td>
+                                <td>Prof. David Kim</td>
+                                <td><span class="status pending">Pendiente</span></td>
+                                <td>Comité Académico</td>
+                                <td><span style="color: var(--text-secondary);">Baja</span></td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" data-action="view-details">Ver</button>
+                                    <button class="btn btn-primary btn-sm" data-action="edit-user">Actualizar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Actividad Reciente y Estadísticas -->
+            <div class="grid-2 mt-20">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Actividad Reciente de Quejas</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--danger); background: var(--bg-secondary);">
+                            <strong>Nueva queja presentada</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">#Q2024-001 - Ética Académica</span><br>
+                            <small style="color: var(--accent-secondary);">Hace 4 horas</small>
+                        </div>
+                        <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--success); background: var(--bg-secondary);">
+                            <strong>Queja resuelta</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">#Q2024-003 - Mala Conducta Académica</span><br>
+                            <small style="color: var(--accent-secondary);">Hace 2 días</small>
+                        </div>
+                        <div style="margin-bottom: 15px; padding: 10px; border-left: 3px solid var(--warning); background: var(--bg-secondary);">
+                            <strong>Comité asignado</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">#Q2024-002 - Caso de acoso</span><br>
+                            <small style="color: var(--accent-secondary);">Hace 3 días</small>
+                        </div>
+                        <div style="padding: 10px; border-left: 3px solid var(--accent-secondary); background: var(--bg-secondary);">
+                            <strong>Investigación iniciada</strong><br>
+                            <span style="color: var(--text-secondary); font-size: 0.9rem;">#Q2024-004 - Discriminación</span><br>
+                            <small style="color: var(--accent-secondary);">Hace 5 días</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Estadísticas de Quejas</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Por Categoría (Este Año)</h4>
+                            <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+                                <span>Ética Académica</span>
+                                <span style="color: var(--accent-primary); font-weight: bold;">8</span>
+                            </div>
+                            <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+                                <span>Acoso</span>
+                                <span style="color: var(--accent-primary); font-weight: bold;">5</span>
+                            </div>
+                            <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+                                <span>Mala Conducta Académica</span>
+                                <span style="color: var(--accent-primary); font-weight: bold;">6</span>
+                            </div>
+                            <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+                                <span>Discriminación</span>
+                                <span style="color: var(--accent-primary); font-weight: bold;">3</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Otro</span>
+                                <span style="color: var(--accent-primary); font-weight: bold;">1</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Tasa de Resolución</h4>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Casos Totales</span>
+                                <span>23</span>
+                            </div>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Resueltos</span>
+                                <span style="color: var(--success); font-weight: bold;">16 (69%)</span>
+                            </div>
+                            <div style="margin-bottom: 10px; display: flex; justify-content: space-between;">
+                                <span>Tiempo Promedio de Resolución</span>
+                                <span style="color: var(--accent-secondary);">18 días</span>
+                            </div>
+                            
+                            <div style="width: 100%; background: var(--bg-secondary); border-radius: 5px; height: 10px;">
+                                <div style="width: 69%; background: var(--success); height: 100%; border-radius: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resumen de Asignación de Comités -->
+            <div class="card mt-20">
+                <div class="card-header">
+                    <h3 class="card-title">Carga de Trabajo de Comités</h3>
+                </div>
+                <div class="card-body">
+                    <div class="grid-2">
+                        <div style="padding: 15px; background: var(--bg-secondary); border-radius: 5px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Comité de Ética</h4>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Casos Activos</span>
+                                <span style="color: var(--warning); font-weight: bold;">4</span>
+                            </div>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Resueltos Este Mes</span>
+                                <span style="color: var(--success); font-weight: bold;">2</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Tiempo Promedio de Procesamiento</span>
+                                <span style="color: var(--text-secondary);">21 días</span>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 15px; background: var(--bg-secondary); border-radius: 5px;">
+                            <h4 style="color: var(--accent-primary); margin-bottom: 10px; font-size: 1rem;">Comité Académico</h4>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Casos Activos</span>
+                                <span style="color: var(--warning); font-weight: bold;">3</span>
+                            </div>
+                            <div style="margin-bottom: 5px; display: flex; justify-content: space-between;">
+                                <span>Resueltos Este Mes</span>
+                                <span style="color: var(--success); font-weight: bold;">3</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Tiempo Promedio de Procesamiento</span>
+                                <span style="color: var(--text-secondary);">15 días</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="navigation.js"></script>
+</body>
+</html>
